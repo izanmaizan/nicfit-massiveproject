@@ -1,5 +1,4 @@
-import { hamburger } from "../assets/icons";
-import { headerLogo } from "../assets/images";
+import { hamburger, logoNicFit } from "../assets/icons";
 import { navLinks } from "../constants";
 
 const Nav = () => {
@@ -8,7 +7,7 @@ const Nav = () => {
       <nav className="flex justify-between items-center max-container">
         <a href="/">
           <img
-            src={headerLogo}
+            src={logoNicFit}
             alt="logo"
             width={130}
             height={45}
