@@ -26,7 +26,7 @@ export const navLinks = [
   { href: "#dashboard", label: "Dashboard" },
   { href: "#konsultasi", label: "Konsultasi" },
   { href: "#temanSehat", label: "Teman Sehat" },
-  { href: "#artikel", label: "Contact Us" },
+  { href: "#artikel", label: "Artikel" },
 ];
 
 // export const navLinks = [
