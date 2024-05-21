@@ -59,3 +59,33 @@
     @apply font-montserrat text-slate-gray text-lg leading-7;
   }
 }
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #508cae;
+  z-index: -1;
+  transition: opacity 0.3s;
+  opacity: 0;
+  border-radius: 8px; /* Sesuaikan sesuai kebutuhan */
+}
+
+.nav-link.active::before {
+  opacity: 1;
+}
+
+.nav-link.active {
+  color: white; /* Warna teks putih saat tombol aktif */
+  transition:
+    color 0.2s,
+    background-color 0.3s; /* Transisi untuk perubahan warna teks dan latar belakang tombol */
+  font-weight: 700;
+}

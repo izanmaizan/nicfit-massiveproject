@@ -1,5 +1,5 @@
 import { manypeople, no_smoking, stop_smoking } from "../assets/images";
-import { CardArtikel } from "../components";
+import { Button2, CardArtikel } from "../components";
 
 const LihatArtikel = () => {
   return (
@@ -37,11 +37,7 @@ Penerus yang Sehat"
         />
       </div>
 
-      <div className="border w-52 h-14 border-primary rounded-55px flex flex-col justify-center items-center mt-24">
-        <h2 className="font-Poppins text-primary-text font-bold">
-          Lihat Semua
-        </h2>
-      </div>
+      <Button2 label="Lihat Semua" />
     </section>
   );
 };
