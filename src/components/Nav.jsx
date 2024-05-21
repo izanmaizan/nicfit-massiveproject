@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { hamburger, logoNicFit } from "../assets/icons";
 import { navLinks } from "../constants";
-import "../index.css"; // Pastikan untuk mengimpor file CSS
+import "../index.css";
 
 const Nav = () => {
   const [activeLink, setActiveLink] = useState("");
