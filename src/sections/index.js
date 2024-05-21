@@ -4,8 +4,10 @@ import LayananKami from "./LayananKami";
 import CariKonsultasi from "./CariKonsultasi";
 import GabungSekarang from "./GabungSekarang";
 import LihatArtikel from "./LihatArtikel";
+import Beranda from "./Beranda";
 
 export {
+  Beranda,
   Jumbotron,
   LayananKami,
   CariKonsultasi,
