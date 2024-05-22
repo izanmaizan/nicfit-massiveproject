@@ -4,6 +4,7 @@ import doctors from "./doctors.png";
 import stop_smoking from "./stop-smoking.png";
 import manypeople from "./2-people.png";
 import no_smoking from "./no-smoking.png";
+import lupa from "./lupa.png";
 
 export {
   female_doctor,
@@ -12,4 +13,5 @@ export {
   stop_smoking,
   manypeople,
   no_smoking,
+  lupa,
 };

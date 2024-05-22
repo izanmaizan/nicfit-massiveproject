@@ -5,9 +5,7 @@ import Check from "../components/Check";
 
 const CariKonsultasi = () => {
   return (
-    <section
-      id="beranda"
-      className="w-full flex xl:flex-row flex-col justify-center h-h-konsultan">
+    <section className="w-full flex xl:flex-row flex-col justify-center h-h-konsultan">
       <div className="relative w-3/6 flex flex-col pt-20 items-start">
         <p className="font-Poppins text-primary-text text-sm">Cari Konsultan</p>
 

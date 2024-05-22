@@ -6,7 +6,7 @@ import PlayStore from "../components/PlayStore";
 const Jumbotron = () => {
   return (
     <section
-      id="jumbotron"
+      id="beranda"
       className="flex justify-between items-center max-lg:flex-col gap-10 w-full max-container">
       <div className="flex flex-1 flex-col">
         <h2 className="font-Poppins text-5xl font-bold w-10/12">

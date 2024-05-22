@@ -1,13 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Nav } from "./components";
 import {
+  Artikel,
   Beranda,
-  // Jumbotron,
+  Daftar,
+  DashboardPage,
   Footer,
-  // LayananKami,
-  // CariKonsultasi,
-  // GabungSekarang,
-  LihatArtikel,
+  KataSandiBaru,
+  Login,
+  LupaSandi,
+  VerifikasiEmail,
 } from "./sections";
 
 const App = () => {
@@ -19,7 +21,13 @@ const App = () => {
           <div className="flex-grow">
             <Routes>
               <Route path="/" element={<Beranda />} />
-              <Route path="/about" element={<LihatArtikel />} />
+              <Route path="/dashboard" element={<DashboardPage />} />
+              <Route path="/artikel" element={<Artikel />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Daftar />} />
+              <Route path="/lupa-sandi" element={<LupaSandi />} />
+              <Route path="/verifikasi" element={<VerifikasiEmail />} />
+              <Route path="/sandi-baru" element={<KataSandiBaru />} />
             </Routes>
           </div>
           <section className="xl:padding-s wide:padding-s pb-10">

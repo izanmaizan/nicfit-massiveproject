@@ -22,11 +22,11 @@
 // } from "../assets/images";
 
 export const navLinks = [
-  { href: "#beranda", label: "Beranda" },
-  { href: "#dashboard", label: "Dashboard" },
-  { href: "#konsultasi", label: "Konsultasi" },
-  { href: "#temanSehat", label: "Teman Sehat" },
-  { href: "#artikel", label: "Artikel" },
+  { href: "/", label: "Beranda" },
+  { href: "/dashboard", label: "Dashboard" },
+  { href: "/konsultasi", label: "Konsultasi" },
+  { href: "/temanSehat", label: "Teman Sehat" },
+  { href: "/artikel", label: "Artikel" },
 ];
 
 // export const navLinks = [
