@@ -12,6 +12,7 @@ import Daftar from "./Daftar";
 import LupaSandi from "./LupaSandi";
 import VerifikasiEmail from "./VerifikasiEmail";
 import KataSandiBaru from "./KataSandiBaru";
+import NotFound from "./NotFound";
 
 export {
   Beranda,
@@ -28,4 +29,5 @@ export {
   LupaSandi,
   VerifikasiEmail,
   KataSandiBaru,
+  NotFound,
 };

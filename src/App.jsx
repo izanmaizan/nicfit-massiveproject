@@ -11,6 +11,7 @@ import {
   LupaSandi,
   VerifikasiEmail,
 } from "./sections";
+import NotFound from "./components/not-found/not-found";
 
 const App = () => {
   return (
@@ -28,6 +29,8 @@ const App = () => {
               <Route path="/lupa-sandi" element={<LupaSandi />} />
               <Route path="/verifikasi" element={<VerifikasiEmail />} />
               <Route path="/sandi-baru" element={<KataSandiBaru />} />
+              <Route path="/konsultasi" element={<NotFound />} />
+              <Route path="/komunitas" element={<NotFound />} />
             </Routes>
           </div>
           <section className="xl:padding-s wide:padding-s pb-10">

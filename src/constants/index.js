@@ -25,7 +25,7 @@ export const navLinks = [
   { href: "/", label: "Beranda" },
   { href: "/dashboard", label: "Dashboard" },
   { href: "/konsultasi", label: "Konsultasi" },
-  { href: "/temanSehat", label: "Teman Sehat" },
+  { href: "/komunitas", label: "Teman Sehat" },
   { href: "/artikel", label: "Artikel" },
 ];
 
