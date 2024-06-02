@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { FaChevronRight, FaChevronLeft, FaSearch } from "react-icons/fa";
 import { konsultasi } from "../assets/images";
 import { konsultan, konsultanKu } from "../assets/dummy/category-konsultan";
