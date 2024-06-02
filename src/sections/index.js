@@ -13,6 +13,7 @@ import LupaSandi from "./LupaSandi";
 import VerifikasiEmail from "./VerifikasiEmail";
 import KataSandiBaru from "./KataSandiBaru";
 import NotFound from "./NotFound";
+import Konsultasi from "./Konsultasi";
 
 export {
   Beranda,
@@ -30,4 +31,5 @@ export {
   VerifikasiEmail,
   KataSandiBaru,
   NotFound,
+  Konsultasi,
 };

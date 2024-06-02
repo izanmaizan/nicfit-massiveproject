@@ -7,11 +7,16 @@ import {
   DashboardPage,
   Footer,
   KataSandiBaru,
+  Konsultasi,
   Login,
   LupaSandi,
   VerifikasiEmail,
 } from "./sections";
-import NotFound from "./components/not-found/not-found";
+// import NotFound from "./components/not-found/not-found";
+import TemanSehat from "./sections/TemanSehat";
+import CommunityChatPage from "./sections/Chat";
+import ArticlePage from "./sections/ArticlePage";
+import CategoryArticle from "./sections/CategoryArticle";
 
 const App = () => {
   return (
@@ -23,14 +28,17 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Beranda />} />
               <Route path="/dashboard" element={<DashboardPage />} />
-              <Route path="/artikel" element={<Artikel />} />
+              <Route path="/artikel" element={<ArticlePage />} />
+              <Route path="/artikel/:category" element={<CategoryArticle />} />
+              <Route path="/artikel/:category/:slug" element={<Artikel />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Daftar />} />
               <Route path="/lupa-sandi" element={<LupaSandi />} />
               <Route path="/verifikasi" element={<VerifikasiEmail />} />
               <Route path="/sandi-baru" element={<KataSandiBaru />} />
-              <Route path="/konsultasi" element={<NotFound />} />
-              <Route path="/komunitas" element={<NotFound />} />
+              <Route path="/konsultasi" element={<Konsultasi />} />
+              <Route path="/komunitas" element={<TemanSehat />} />
+              <Route path="/komunitas/chat" element={<CommunityChatPage />} />
             </Routes>
           </div>
           <section className="xl:padding-s wide:padding-s pb-10">
