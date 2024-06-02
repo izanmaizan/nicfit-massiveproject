@@ -1,3 +1,5 @@
+
+
 const Bank = ({ imgLogo, title }) => {
   return (
     <div className="w-[120px] h-[110px] rounded-xl shadow-xl flex flex-col items-center justify-center border border-[#D6E6E9] hover:bg-slate-200">
