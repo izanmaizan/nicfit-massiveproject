@@ -2,6 +2,11 @@ import { useState, useEffect } from "react";
 import { FaChevronRight, FaChevronLeft, FaSearch } from "react-icons/fa";
 import { konsultasi } from "../assets/images";
 import { konsultan, konsultanKu } from "../assets/dummy/category-konsultan";
+import { Bank } from "../components";
+
+import bca from "/images/bca.svg";
+import bni from "/images/bni.svg";
+import bri from "/images/bri.svg";
 
 function Konsultasi() {
   const [selected, setSelected] = useState("Konsultasi");
@@ -326,7 +331,13 @@ function Konsultasi() {
           <div
             className={`bg-white p-6 rounded-3xl flex flex-col items-center transition-all duration-300 transform ${modalClass}`}
             onClick={(e) => e.stopPropagation()}>
-            <h1>Hello World</h1>
+            <h1 className="text-base font-semibold">Pilih Metode Pembayaran</h1>
+            <p className="text-[10px] text-[#AEAEAE] mt-2">Pilih Bank</p>
+            <div className="flex flex-row gap-[15px] mt-6">
+              <Bank imgLogo={bca} title="BCA" />
+              <Bank imgLogo={bni} title="BNI" />
+              <Bank imgLogo={bri} title="BRI" />
+            </div>
           </div>
         </div>
       )}
