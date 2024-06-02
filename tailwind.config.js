@@ -35,6 +35,7 @@ export default {
         Poppins: ["Poppins", "sans-serif"],
         Mulish: ["Mulish", "sans-serif"],
         Manrope: ["Manrope", "sans-serif"],
+        Lato: ["Lato", "sans-serif"],
       },
       colors: {
         "color-1": "#508CAE",

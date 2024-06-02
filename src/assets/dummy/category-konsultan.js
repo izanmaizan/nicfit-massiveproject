@@ -7,9 +7,10 @@ export const konsultan = [
     experience: "7 Tahun Pengalaman",
     location: "Jakarta, Indonesia",
     description:
-      "Grup Pasukan Berhenti Merokok adalah tempat di mana kita saling dukung, semangati, dan <br /> berbagi tips untuk melewati perjalanan berhenti merokok. Bersama, kita membangun kekuatan <br /> untuk mencapai kebebasan dari rokok dan menjalani hidup yang lebih sehat",
+      "seorang dokter spesialis paru yang berdedikasi untuk menyediakan perawatan terbaik kepada pasien",
     insight: "4.8 (1286 ulasan)",
     story: "93 Cerita Pasien",
+    available: "Tersedia Hari Ini",
   },
   {
     id: 2,
@@ -19,9 +20,10 @@ export const konsultan = [
     experience: "7 Tahun Pengalaman",
     location: "Jakarta, Indonesia",
     description:
-      "Grup Pasukan Berhenti Merokok adalah tempat di mana kita saling dukung, semangati, dan <br /> berbagi tips untuk melewati perjalanan berhenti merokok. Bersama, kita membangun kekuatan <br /> untuk mencapai kebebasan dari rokok dan menjalani hidup yang lebih sehat",
+      "seorang dokter spesialis paru yang berdedikasi untuk menyediakan perawatan terbaik kepada pasien",
     insight: "4.8 (1286 ulasan)",
     story: "93 Cerita Pasien",
+    available: "Penuh Hari Ini",
   },
   {
     id: 3,
@@ -31,9 +33,10 @@ export const konsultan = [
     experience: "7 Tahun Pengalaman",
     location: "Jakarta, Indonesia",
     description:
-      "Grup Pasukan Berhenti Merokok adalah tempat di mana kita saling dukung, semangati, dan <br /> berbagi tips untuk melewati perjalanan berhenti merokok. Bersama, kita membangun kekuatan <br /> untuk mencapai kebebasan dari rokok dan menjalani hidup yang lebih sehat",
+      "seorang dokter spesialis paru yang berdedikasi untuk menyediakan perawatan terbaik kepada pasien",
     insight: "4.8 (1286 ulasan)",
     story: "93 Cerita Pasien",
+    available: "Tersedia Hari Ini",
   },
   {
     id: 4,
@@ -43,9 +46,10 @@ export const konsultan = [
     experience: "7 Tahun Pengalaman",
     location: "Jakarta, Indonesia",
     description:
-      "Grup Pasukan Berhenti Merokok adalah tempat di mana kita saling dukung, semangati, dan <br /> berbagi tips untuk melewati perjalanan berhenti merokok. Bersama, kita membangun kekuatan <br /> untuk mencapai kebebasan dari rokok dan menjalani hidup yang lebih sehat",
+      "seorang dokter spesialis paru yang berdedikasi untuk menyediakan perawatan terbaik kepada pasien",
     insight: "4.8 (1286 ulasan)",
     story: "93 Cerita Pasien",
+    available: "Penuh Hari Ini",
   },
   {
     id: 5,
@@ -55,8 +59,38 @@ export const konsultan = [
     experience: "7 Tahun Pengalaman",
     location: "Jakarta, Indonesia",
     description:
-      "Grup Pasukan Berhenti Merokok adalah tempat di mana kita saling dukung, semangati, dan <br /> berbagi tips untuk melewati perjalanan berhenti merokok. Bersama, kita membangun kekuatan <br /> untuk mencapai kebebasan dari rokok dan menjalani hidup yang lebih sehat",
+      "seorang dokter spesialis paru yang berdedikasi untuk menyediakan perawatan terbaik kepada pasien",
     insight: "4.8 (1286 ulasan)",
     story: "93 Cerita Pasien",
+    available: "Tersedia Hari Ini",
+  },
+];
+
+export const konsultanKu = [
+  {
+    id: 1,
+    img: "/images/doctorKonsultan.svg",
+    title: "Dr. Pawan Kusuma",
+    role: "Spesialis Jantung & Paru",
+    experience: "7 Tahun Pengalaman",
+    location: "Jakarta, Indonesia",
+    description:
+      "seorang dokter spesialis paru yang berdedikasi untuk menyediakan perawatan terbaik kepada pasien",
+    insight: "4.8 (1286 ulasan)",
+    story: "93 Cerita Pasien",
+    available: "Tersedia Hari Ini",
+  },
+  {
+    id: 2,
+    img: "/images/doctorKonsultan.svg",
+    title: "Dr. Pawan Kusuma",
+    role: "Spesialis Jantung & Paru",
+    experience: "7 Tahun Pengalaman",
+    location: "Jakarta, Indonesia",
+    description:
+      "seorang dokter spesialis paru yang berdedikasi untuk menyediakan perawatan terbaik kepada pasien",
+    insight: "4.8 (1286 ulasan)",
+    story: "93 Cerita Pasien",
+    available: "Penuh Hari Ini",
   },
 ];

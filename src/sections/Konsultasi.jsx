@@ -1,70 +1,47 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
-import { FaSearch } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import { FaChevronRight, FaChevronLeft, FaSearch } from "react-icons/fa";
 import { konsultasi } from "../assets/images";
-import { konsultan } from "../assets/dummy/category-konsultan";
+import { konsultan, konsultanKu } from "../assets/dummy/category-konsultan";
 
 function Konsultasi() {
-  const [selected, setSelected] = useState("Komunitas");
+  const [selected, setSelected] = useState("Konsultasi");
+  const [isModalUpgrade, setisModalUpgrade] = useState(false);
+  const [isModalPayment, setisModalpayment] = useState(false);
+  const [modalClass, setModalClass] = useState("modal-close");
 
-  // const komunitas = [
-  //   {
-  //     id: 1,
-  //     img: "/images/no-smoke-day.svg",
-  //     title: "Pasukan Berhenti Merokok",
-  //     description:
-  //       "Grup Pasukan Berhenti Merokok adalah tempat di mana kita saling dukung, semangati, dan <br /> berbagi tips untuk melewati perjalanan berhenti merokok. Bersama, kita membangun kekuatan <br /> untuk mencapai kebebasan dari rokok dan menjalani hidup yang lebih sehat",
-  //     available: "Tersedia",
-  //     people: "100+ Orang tergabung",
-  //   },
-  //   {
-  //     id: 2,
-  //     img: "/images/no-smoke-area.svg",
-  //     title: "Forum Anti Rokok",
-  //     description:
-  //       "Forum Anti Rokok adalah ruang diskusi untuk membangun kesadaran akan bahaya merokok<br/>dan mendukung gaya hidup tanpa rokok. Di sini, kita saling berbagi informasi, pengalaman, dan<br/>dukungan untuk mewujudkan hidup sehat tanpa rokok.",
-  //     available: "Tersedia",
-  //     people: "50 Orang tergabung",
-  //   },
-  //   {
-  //     id: 3,
-  //     img: "/images/no-smoke-day.svg",
-  //     title: "Pasukan Berhenti Merokok",
-  //     description:
-  //       "Grup Pasukan Berhenti Merokok adalah tempat di mana kita saling dukung, semangati, dan <br /> berbagi tips untuk melewati perjalanan berhenti merokok. Bersama, kita membangun kekuatan <br /> untuk mencapai kebebasan dari rokok dan menjalani hidup yang lebih sehat",
-  //     available: "Penuh",
-  //     people: "100+ Orang tergabung",
-  //   },
-  //   {
-  //     id: 4,
-  //     img: "/images/no-smoke-area.svg",
-  //     title: "Forum Anti Rokok",
-  //     description:
-  //       "Forum Anti Rokok adalah ruang diskusi untuk membangun kesadaran akan bahaya merokok<br/>dan mendukung gaya hidup tanpa rokok. Di sini, kita saling berbagi informasi, pengalaman, dan<br/>dukungan untuk mewujudkan hidup sehat tanpa rokok.",
-  //     available: "Penuh",
-  //     people: "50 Orang tergabung",
-  //   },
-  // ];
+  const handleUpgradeClick = () => {
+    setisModalUpgrade(true);
+  };
 
-  const komunitasKu = [
-    {
-      id: 1,
-      img: "/images/no-smoke-day.svg",
-      title: "Pasukan Berhenti Merokok",
-      description:
-        "Grup Pasukan Berhenti Merokok adalah tempat di mana kita saling dukung, semangati, dan <br /> berbagi tips untuk melewati perjalanan berhenti merokok. Bersama, kita membangun kekuatan <br /> untuk mencapai kebebasan dari rokok dan menjalani hidup yang lebih sehat",
-      people: "100+ Orang tergabung",
-    },
-    {
-      id: 2,
-      img: "/images/no-smoke-area.svg",
-      title: "Forum Anti Rokok",
-      description:
-        "Forum Anti Rokok adalah ruang diskusi untuk membangun kesadaran akan bahaya merokok<br/>dan mendukung gaya hidup tanpa rokok. Di sini, kita saling berbagi informasi, pengalaman, dan<br/>dukungan untuk mewujudkan hidup sehat tanpa rokok.",
-      people: "50 Orang tergabung",
-    },
-  ];
+  const handlePaymentClick = () => {
+    setisModalpayment(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalClass("modal-close");
+    setTimeout(() => {
+      setisModalUpgrade(false);
+      setisModalpayment(false);
+    }, 300);
+  };
+
+  useEffect(() => {
+    if (isModalUpgrade) {
+      setModalClass("modal-open");
+    }
+  }, [isModalUpgrade]);
+
+  useEffect(() => {
+    if (isModalPayment) {
+      setModalClass("modal-open");
+    }
+  }, [isModalPayment]);
+
+  const handleOverlayClick = (e) => {
+    if (e.target.id === "modal-overlay") {
+      handleCloseModal();
+    }
+  };
 
   return (
     <main
@@ -92,88 +69,135 @@ function Konsultasi() {
 
       <div className="rounded-[10px] w-[403px] h-[56px] border-2 border-[#508CAE] grid grid-cols-2">
         <button
-          onClick={() => setSelected("Komunitas")}
-          className={`${selected === "Komunitas" ? "text-white bg-[#508CAE]" : "text-black"} rounded-l-[5px]`}>
+          onClick={() => setSelected("Konsultasi")}
+          className={`${
+            selected === "Konsultasi" ? "text-white bg-[#508CAE]" : "text-black"
+          } rounded-l-[5px]`}>
           Konsultasi
         </button>
         <button
-          onClick={() => setSelected("KomunitasKu")}
-          className={`${selected === "KomunitasKu" ? "text-white bg-[#508CAE]" : "text-black"} rounded-r-[5px]`}>
+          onClick={() => setSelected("KonsultasiKu")}
+          className={`${
+            selected === "KonsultasiKu"
+              ? "text-white bg-[#508CAE]"
+              : "text-black"
+          } rounded-r-[5px]`}>
           Konsultasi-ku
         </button>
       </div>
 
-      {selected === "Komunitas" ? (
+      {selected === "Konsultasi" ? (
         <>
           {konsultan.map((item) => (
             <div
               key={item.id}
               className="w-full rounded-[20px] shadow-lg flex justify-between bg-[#F8F9FC] items-center my-10 px-10 py-4">
               <div className="flex gap-5">
-                <img src={item.img} alt={item.title} />
-                <div>
-                  <h1 className="text-[#2C2626] font-bold text-[24px]">
-                    {item.title}
-                  </h1>
-                  <p
-                    className="text-[#898989] font-normal text-[14px]"
-                    dangerouslySetInnerHTML={{ __html: item.description }}
+                <div className="flex flex-col items-center gap-6">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="rounded-full border-2 border-primary-text object-cover"
                   />
-                  <div className=""></div>
-                  <div className="flex items-center">
-                    <img src="/images/user.svg" alt="user" />
-                    <p className="text-black font-normal text-[12px]">
-                      {item.people}
-                    </p>
+                  <div className="inline-flex bg-[#00A500] gap-1 rounded-md w-16 h-6 py-1 px-2 items-center">
+                    <img src="/images/like.svg" alt="" />
+                    <span className="text-white font-Lato font-bold">99%</span>
                   </div>
                 </div>
-              </div>
-              <div className="flex flex-col gap-20">
+
                 <div>
+                  <h1 className="text-primary-text font-bold text-[24px]">
+                    {item.title}
+                  </h1>
+                  <p className="text-[#4F4F4F] text-sm">{item.role}</p>
+                  <p className="text-[#787887] text-sm">{item.experience}</p>
+                  <p className="text-[#414146] font-bold">{item.location}</p>
                   <p
-                    className={`${item.available === "Tersedia" ? "text-[#01A400]" : "text-[#FF0000]"} font-medium text-[14px] text-end`}>
-                    {item.available}
-                  </p>
+                    className="text-[#898989] font-normal text-[14px] w-[582px]"
+                    dangerouslySetInnerHTML={{ __html: item.description }}
+                  />
+                  <div className="flex items-center">
+                    <img src="/images/starrate.svg" alt="star rate" />
+                    <p className="text-black font-normal text-[12px] pl-1">
+                      {item.insight}
+                    </p>
+                  </div>
+                  <span className="text-[#414146] font-bold font-Lato">
+                    {item.story}
+                  </span>
                 </div>
-                <button className="w-[212px] h-[44px] bg-[#508CAE] text-white rounded-[10px]">
-                  Gabung Komunitas
-                </button>
+              </div>
+              <div className="mt-28">
+                <div className="flex flex-col gap-3">
+                  <div>
+                    <p
+                      className={`${
+                        item.available === "Tersedia Hari Ini"
+                          ? "text-[#01A400]"
+                          : "text-[#FF0000]"
+                      } font-medium text-[14px] text-center font-Poppins`}>
+                      {item.available}
+                    </p>
+                  </div>
+                  <button
+                    onClick={handleUpgradeClick}
+                    className="w-[212px] h-[44px] bg-[#508CAE] text-white rounded-[10px] hover:bg-primary-text-hover">
+                    Chat Konsultan
+                  </button>
+                </div>
               </div>
             </div>
           ))}
         </>
       ) : (
         <>
-          {komunitasKu.map((item) => (
+          {konsultanKu.map((item) => (
             <div
               key={item.id}
               className="w-full rounded-[20px] shadow-lg flex justify-between bg-[#F8F9FC] items-center my-10 px-10 py-4">
               <div className="flex gap-5">
-                <img src={item.img} alt={item.title} />
-                <div>
-                  <h1 className="text-[#2C2626] font-bold text-[24px]">
-                    {item.title}
-                  </h1>
-                  <p
-                    className="text-[#898989] font-normal text-[14px]"
-                    dangerouslySetInnerHTML={{ __html: item.description }}
+                <div className="flex flex-col items-center gap-6">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="rounded-full border-2 border-primary-text object-cover"
                   />
-                  <div className=""></div>
-                  <div className="flex items-center">
-                    <img src="/images/user.svg" alt="user" />
-                    <p className="text-black font-normal text-[12px]">
-                      {item.people}
-                    </p>
+                  <div className="inline-flex bg-[#00A500] gap-1 rounded-md w-16 h-6 py-1 px-2 items-center">
+                    <img src="/images/like.svg" alt="" />
+                    <span className="text-white font-Lato font-bold">99%</span>
                   </div>
                 </div>
+
+                <div>
+                  <h1 className="text-primary-text font-bold text-[24px]">
+                    {item.title}
+                  </h1>
+                  <p className="text-[#4F4F4F] text-sm">{item.role}</p>
+                  <p className="text-[#787887] text-sm">{item.experience}</p>
+                  <p className="text-[#414146] font-bold">{item.location}</p>
+                  <p
+                    className="text-[#898989] font-normal text-[14px] w-[582px]"
+                    dangerouslySetInnerHTML={{ __html: item.description }}
+                  />
+                  <div className="flex items-center">
+                    <img src="/images/starrate.svg" alt="star rate" />
+                    <p className="text-black font-normal text-[12px] pl-1">
+                      {item.insight}
+                    </p>
+                  </div>
+                  <span className="text-[#414146] font-bold font-Lato">
+                    {item.story}
+                  </span>
+                </div>
               </div>
-              <div className="flex flex-col gap-20">
-                <div />
-                <Link to="/komunitas/chat">
-                  <button className="w-[212px] h-[44px] bg-[#508CAE] text-white rounded-[10px]">
-                    Kirim Pesan
+              <div className="mt-28">
+                <div className="flex flex-col gap-3">
+                  <button
+                    onClick={handleUpgradeClick}
+                    className="w-[212px] h-[44px] bg-[#508CAE] text-white rounded-[10px] hover:bg-primary-text-hover">
+                    Chat Konsultan
                   </button>
-                </Link>
+                </div>
               </div>
             </div>
           ))}
@@ -193,7 +217,14 @@ function Konsultasi() {
             Next
           </a>
         </div>
-        <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-center">
+        <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+          <div>
+            <p className="text-sm text-gray-700">
+              Showing <span className="font-medium">1</span> to{" "}
+              <span className="font-medium">10</span> of{" "}
+              <span className="font-medium">97</span> results
+            </p>
+          </div>
           <div>
             <nav
               className="isolate inline-flex -space-x-px rounded-md shadow-sm text-center"
@@ -204,7 +235,6 @@ function Konsultasi() {
                 <span className="sr-only">Previous</span>
                 <FaChevronLeft className="h-5 w-5" aria-hidden="true" />
               </a>
-              {/* Current: "z-10 bg-indigo-600 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600", Default: "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0" */}
               <a
                 href="#"
                 aria-current="page"
@@ -249,6 +279,57 @@ function Konsultasi() {
           </div>
         </div>
       </div>
+
+      {isModalUpgrade && (
+        <div
+          id="modal-overlay"
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+          onClick={handleOverlayClick}>
+          <div
+            className={`bg-white p-6 rounded-3xl flex flex-col items-center transition-all duration-300 transform ${modalClass}`}
+            onClick={(e) => e.stopPropagation()}>
+            <img src="/images/bingo.svg" alt="Pro" className="w-72 h-48 mb-7" />
+            <h2 className="text-xl font-Poppins font-semibold text-primary-text text-center">
+              Versi Pro
+            </h2>
+            <h1 className="text-center text-36px font-bold font-[#2C2626]">
+              Rp 50.000
+            </h1>
+            <div className="pl-14">
+              <p>
+                <span className="font-bold text-primary-text pr-2">✓</span>
+                Konsultasi Setiap Hari
+              </p>
+              <p>
+                <span className="font-bold text-primary-text pr-2">✓</span>Join
+                Teman Sehat Tanpa Batas
+              </p>
+              <p>
+                <span className="font-bold text-primary-text pr-2">✓</span>
+                Prioritas Customer Service
+              </p>
+            </div>
+            <button
+              onClick={handlePaymentClick}
+              className="w-[212px] h-[44px] bg-[#508CAE] text-white rounded-[10px] hover:bg-primary-text-hover mt-8">
+              Tingkatkan Versi Pro
+            </button>
+          </div>
+        </div>
+      )}
+
+      {isModalPayment && (
+        <div
+          id="modal-overlay"
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+          onClick={handleOverlayClick}>
+          <div
+            className={`bg-white p-6 rounded-3xl flex flex-col items-center transition-all duration-300 transform ${modalClass}`}
+            onClick={(e) => e.stopPropagation()}>
+            <h1>Hello World</h1>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
