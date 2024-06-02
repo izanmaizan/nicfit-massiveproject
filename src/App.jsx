@@ -10,6 +10,7 @@ import {
   Konsultasi,
   Login,
   LupaSandi,
+  Payment,
   VerifikasiEmail,
 } from "./sections";
 // import NotFound from "./components/not-found/not-found";
@@ -39,6 +40,7 @@ const App = () => {
               <Route path="/konsultasi" element={<Konsultasi />} />
               <Route path="/komunitas" element={<TemanSehat />} />
               <Route path="/komunitas/chat" element={<CommunityChatPage />} />
+              <Route path="/konsultasi/payment" element={<Payment />} />
             </Routes>
           </div>
           <section className="xl:padding-s wide:padding-s pb-10">

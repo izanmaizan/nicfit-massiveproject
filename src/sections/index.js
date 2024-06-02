@@ -14,6 +14,7 @@ import VerifikasiEmail from "./VerifikasiEmail";
 import KataSandiBaru from "./KataSandiBaru";
 import NotFound from "./NotFound";
 import Konsultasi from "./Konsultasi";
+import Payment from "./Payment";
 
 export {
   Beranda,
@@ -32,4 +33,5 @@ export {
   KataSandiBaru,
   NotFound,
   Konsultasi,
+  Payment,
 };
