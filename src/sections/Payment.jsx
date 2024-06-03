@@ -318,9 +318,15 @@ function Payment() {
             className={`w-[355px] bg-white p-6 rounded-3xl flex flex-col items-center transition-all duration-300 transform ${modalClass}`}
             onClick={(e) => e.stopPropagation()}>
             <h1 className="text-base font-semibold">Selamat Datang!</h1>
-            <p className="text-xs font-normal">
+            <p className="text-xs font-normal mt-3 mb-7">
               Selamat Akun Anda Sudah Dalam Versi Pro
             </p>
+            <img src="/public/images/welcome.svg" alt="welcome" />
+            <button
+              onClick={handleProClick}
+              className="w-[230px] h-[44px] bg-[#508CAE] text-white rounded-[10px] hover:bg-primary-text-hover mt-5">
+              Selanjutnya
+            </button>
           </div>
         </div>
       )}
