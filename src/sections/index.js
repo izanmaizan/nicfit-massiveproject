@@ -15,6 +15,10 @@ import KataSandiBaru from "./KataSandiBaru";
 import NotFound from "./NotFound";
 import Konsultasi from "./Konsultasi";
 import Payment from "./Payment";
+import ChatKonsultan from "./ChatKonsultasi.jsx";
+import Profile from "./Profile";
+import Schedule from "./Schedule";
+import TukarPoint from "./TukarPoint.jsx";
 
 export {
   Beranda,
@@ -34,4 +38,8 @@ export {
   NotFound,
   Konsultasi,
   Payment,
+  ChatKonsultan,
+  Profile,
+  Schedule,
+  TukarPoint,
 };

@@ -3,6 +3,7 @@ import { FaChevronRight, FaChevronLeft, FaSearch } from "react-icons/fa";
 import { konsultasi } from "../assets/images";
 import { konsultan, konsultanKu } from "../assets/dummy/category-konsultan";
 import { Bank } from "../components";
+import { Link } from "react-router-dom";
 
 import bca from "/images/bca.svg";
 import bni from "/images/bni.svg";
@@ -197,11 +198,11 @@ function Konsultasi() {
               </div>
               <div className="mt-28">
                 <div className="flex flex-col gap-3">
-                  <button
-                    onClick={handleUpgradeClick}
-                    className="w-[212px] h-[44px] bg-[#508CAE] text-white rounded-[10px] hover:bg-primary-text-hover">
-                    Chat Konsultan
-                  </button>
+                  <Link to="/konsultasi/chat">
+                    <button className="w-[212px] h-[44px] bg-[#508CAE] text-white rounded-[10px] hover:bg-primary-text-hover">
+                      Chat Konsultan
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
