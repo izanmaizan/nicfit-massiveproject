@@ -47,7 +47,10 @@ const App = () => {
               <Route path="/konsultasi/payment" element={<Payment />} />
               <Route path="/konsultasi/chat" element={<ChatKonsultan />} />
               <Route path="/konsultasi/schedule" element={<Schedule />} />
+<<<<<<< HEAD
               <Route path="/tukar-point" element={<TukarPoint />} />
+=======
+>>>>>>> b88fe023dbe11e7857c2f4961773857168f20c4c
               <Route path="/profile" element={<Profile />} />
             </Routes>
           </div>

@@ -18,7 +18,10 @@ import Payment from "./Payment";
 import ChatKonsultan from "./ChatKonsultasi.jsx";
 import Profile from "./Profile";
 import Schedule from "./Schedule";
+<<<<<<< HEAD
 import TukarPoint from "./TukarPoint.jsx";
+=======
+>>>>>>> b88fe023dbe11e7857c2f4961773857168f20c4c
 
 export {
   Beranda,
@@ -41,5 +44,8 @@ export {
   ChatKonsultan,
   Profile,
   Schedule,
+<<<<<<< HEAD
   TukarPoint,
+=======
+>>>>>>> b88fe023dbe11e7857c2f4961773857168f20c4c
 };
