@@ -485,7 +485,7 @@ function DashboardPage() {
           </section>
         </div>
       ) : (
-        <div className="relative">
+        <div className="relative font-Poppins">
           <section className="my-20 z-20 relative flex flex-row justify-between">
             <div className="">
               <h1 className="text-[60px] font-semibold pt-20 mb-8">
