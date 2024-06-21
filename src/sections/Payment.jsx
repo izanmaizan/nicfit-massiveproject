@@ -1,7 +1,53 @@
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import { konsultanKu } from "../assets/dummy/category-konsultan";
+<<<<<<< HEAD
 
 function Payment() {
+=======
+import { Collapse } from "../components";
+import { useState, useEffect } from "react";
+
+function Payment() {
+  const [isModalSuccess, setisModalSuccess] = useState(false);
+  const [isModalPro, setisModalPro] = useState(false);
+  const [modalClass, setModalClass] = useState("modal-close");
+
+  const handleSuccessClick = () => {
+    setisModalSuccess(true);
+  };
+
+  const handleProClick = () => {
+    setisModalSuccess(false);
+    setisModalPro(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalClass("modal-close");
+    setTimeout(() => {
+      setisModalSuccess(false);
+      setisModalPro(false);
+    }, 300);
+  };
+
+  useEffect(() => {
+    if (isModalSuccess) {
+      setModalClass("modal-open");
+    }
+  }, [isModalSuccess]);
+
+  useEffect(() => {
+    if (isModalPro) {
+      setModalClass("modal-open");
+    }
+  }, [isModalPro]);
+
+  const handleOverlayClick = (e) => {
+    if (e.target.id === "modal-overlay") {
+      handleCloseModal();
+    }
+  };
+
+>>>>>>> 4600dbc6ebf83b0c9020f625487e4753deb1ecc5
   return (
     <main
       id="komunitas"
@@ -26,22 +72,92 @@ function Payment() {
               <h2 className="text-[#2F2F2F] text-base font-medium">
                 Virtual Account Billing
               </h2>
+<<<<<<< HEAD
               <div className="w-[230px] h-[50px] flex items-center justify-center gap-4 rounded-lg border border-[#D6E6E9] shadow-xl">
                 <span className="text-base text-primary-text font-medium">
                   1234 087 2100 2927
                 </span>
                 <span className="text-[#929292] text-xs">
+=======
+              <div
+                className="w-[230px] h-[50px] flex items-center justify-center gap-4 rounded-lg border border-[#D6E6E9] shadow-xl cursor-pointer"
+                onClick={handleSuccessClick}>
+                <span className="text-base text-primary-text font-medium">
+                  1234 087 2100 2927
+                </span>
+                <span className="text-[#929292] text-xs flex flex-col items-center">
+>>>>>>> 4600dbc6ebf83b0c9020f625487e4753deb1ecc5
                   <img src="/images/copy.svg" alt="copy" />
                   COPY
                 </span>
               </div>
             </div>
           </div>
+<<<<<<< HEAD
           <div className=""></div>
         </div>
 
         <div className="h-5/6">
           <div className="relative backdrop-blur-sm w-[800px] h-[700px] z-50"></div>
+=======
+
+          <h1 className="text-[#2F2F31] text-base font-medium mt-4 mb-2">
+            INFORMASI
+          </h1>
+          <div className="w-[400px] h-[140px] flex flex-row border border-slate-300 rounded-xl shadow-xl pl-4 pt-5 pr-2 pb-4">
+            <div className="w-[280px] flex flex-col justify-between">
+              <span className="text-[#2F2F31] text-xs font-medium">
+                Nama Akun
+              </span>
+              <hr className="w-[290px] h-[1px] mx-auto bg-gray-400 border-1 rounded" />
+              <span className="text-[#2F2F31] text-xs font-medium">
+                Total Pembayaran
+              </span>
+              <hr className="w-[290px] h-[1px] mx-auto bg-gray-400 border-1 rounded" />
+              <span className="text-[#2F2F31] text-xs font-medium">
+                Bayar Dalam
+              </span>
+            </div>
+            <div className="flex flex-col justify-between gap-6">
+              <span className="text-[#2F2F31] text-xs font-medium">
+                Yoga Agatha
+              </span>
+              <span className="text-[#2F2F31] text-xs font-medium">
+                Rp 50.000
+              </span>
+              <span className="text-[#FF7439] text-xs font-medium">
+                23 jam 59 menit 59 detik
+              </span>
+            </div>
+          </div>
+          <h1 className="text-[#2F2F31] text-base font-medium mt-4 mb-2">
+            INSTRUKSI
+          </h1>
+          <div className="w-[400px] flex flex-col border border-slate-300 rounded-xl shadow-xl pl-4 pt-5 pr-2 pb-4">
+            <Collapse title="ATM">
+              <p>
+                Instruksi penggunaan ATM: Masukkan kartu, masukkan PIN, pilih
+                transaksi, ambil kartu dan uang.
+              </p>
+            </Collapse>
+            <Collapse title="Mobile Banking">
+              <p>
+                Instruksi penggunaan Mobile Banking: Unduh aplikasi, masukkan
+                nomor telepon dan PIN, pilih transaksi, konfirmasi transaksi.
+              </p>
+            </Collapse>
+            <Collapse title="Internet Banking">
+              <p>
+                Instruksi penggunaan Internet Banking: Buka situs, masukkan user
+                ID dan password, pilih transaksi, konfirmasi dengan OTP.
+              </p>
+            </Collapse>
+          </div>
+        </div>
+
+        <div className="h-5/6">
+          <div className="relative backdrop-blur-sm w-[800px] h-[700px] z-10"></div>
+>>>>>>> 4600dbc6ebf83b0c9020f625487e4753deb1ecc5
           {konsultanKu.map((item) => (
             <div
               key={item.id}
@@ -161,6 +277,83 @@ function Payment() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+      {isModalSuccess && (
+        <div
+          id="modal-overlay"
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-20"
+          onClick={handleOverlayClick}>
+          <div
+            className={`w-[320px] bg-white p-6 rounded-3xl flex flex-col items-center transition-all duration-300 transform ${modalClass}`}
+            onClick={(e) => e.stopPropagation()}>
+            <img src="/public/images/bcalogo.svg" alt="logo bca" />
+            <h3 className="text-base font-semibold mt-5 mb-2">
+              Transaksi Telah Sukses
+            </h3>
+            <p className="text-[#AEAEAE] text-xs font-medium">
+              20 Mei 2024 20:00 gmt+7
+            </p>
+            <h1 className="text-2xl font-semibold mt-5 mb-8">Rp50.000</h1>
+            <div className="w-full flex flex-row justify-between">
+              <div className="flex flex-col text-left text-xs font-medium">
+                <span>Pengirim</span>
+                <span>Bank Tujuan</span>
+                <span>Nomor Akun</span>
+                <span>ID Transaksi</span>
+                <span>Catatan</span>
+              </div>
+              <div className="flex flex-col text-right text-xs font-medium">
+                <span>Yoga Agatha</span>
+                <span>BCA</span>
+                <span>8930462013</span>
+                <span>2435GASFD7523</span>
+              </div>
+            </div>
+            <div className="w-full flex flex-row justify-between mt-20">
+              <div className="flex gap-2">
+                <img src="/public/assets/download.svg" alt="download" />
+                <span className="text-primary-text text-sm font-medium">
+                  Download
+                </span>
+              </div>
+              <div className="flex gap-2">
+                <img src="/public/assets/share.svg" alt="download" />
+                <span className="text-primary-text text-sm font-medium">
+                  Share
+                </span>
+              </div>
+            </div>
+            <button
+              onClick={handleProClick}
+              className="w-full h-[44px] bg-[#508CAE] text-white rounded-[10px] hover:bg-primary-text-hover mt-8">
+              TUTUP
+            </button>
+          </div>
+        </div>
+      )}
+      {isModalPro && (
+        <div
+          id="modal-overlay"
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-20"
+          onClick={handleOverlayClick}>
+          <div
+            className={`w-[355px] bg-white p-6 rounded-3xl flex flex-col items-center transition-all duration-300 transform ${modalClass}`}
+            onClick={(e) => e.stopPropagation()}>
+            <h1 className="text-base font-semibold">Selamat Datang!</h1>
+            <p className="text-xs font-normal mt-3 mb-7">
+              Selamat Akun Anda Sudah Dalam Versi Pro
+            </p>
+            <img src="/public/images/welcome.svg" alt="welcome" />
+            <button
+              onClick={handleProClick}
+              className="w-[230px] h-[44px] bg-[#508CAE] text-white rounded-[10px] hover:bg-primary-text-hover mt-5">
+              Selanjutnya
+            </button>
+          </div>
+        </div>
+      )}
+>>>>>>> 4600dbc6ebf83b0c9020f625487e4753deb1ecc5
     </main>
   );
 }

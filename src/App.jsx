@@ -3,6 +3,7 @@ import { Nav } from "./components";
 import {
   Artikel,
   Beranda,
+  ChatKonsultan,
   Daftar,
   DashboardPage,
   Footer,
@@ -11,7 +12,10 @@ import {
   Login,
   LupaSandi,
   Payment,
+  Profile,
+  Schedule,
   VerifikasiEmail,
+  TukarPoint,
 } from "./sections";
 // import NotFound from "./components/not-found/not-found";
 import TemanSehat from "./sections/TemanSehat";
@@ -41,6 +45,10 @@ const App = () => {
               <Route path="/komunitas" element={<TemanSehat />} />
               <Route path="/komunitas/chat" element={<CommunityChatPage />} />
               <Route path="/konsultasi/payment" element={<Payment />} />
+              <Route path="/konsultasi/chat" element={<ChatKonsultan />} />
+              <Route path="/konsultasi/schedule" element={<Schedule />} />
+              <Route path="/tukar-point" element={<TukarPoint />} />
+              <Route path="/profile" element={<Profile />} />
             </Routes>
           </div>
           <section className="xl:padding-s wide:padding-s pb-10">

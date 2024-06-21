@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import mysql from 'mysql2/promise'
 import dotenv from 'dotenv'
 
@@ -14,3 +15,12 @@ const pool = mysql.createPool({
 })
 
 export default pool
+=======
+import { Sequelize } from 'sequelize'
+const db = new Sequelize('nicfit', 'root', '', {
+  host: 'localhost',
+  dialect: 'mysql',
+})
+
+export default db
+>>>>>>> 4600dbc6ebf83b0c9020f625487e4753deb1ecc5

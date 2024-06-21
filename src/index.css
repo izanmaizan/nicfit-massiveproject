@@ -86,7 +86,7 @@
 .nav-link.active {
   color: white; /* Warna teks putih saat tombol aktif */
   transition:
-    color 0.2s,
+    color 0.1s,
     background-color 0.3s; /* Transisi untuk perubahan warna teks dan latar belakang tombol */
   font-weight: 700;
 }
