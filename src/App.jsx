@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Nav } from "./components";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Nav } from './components'
 import {
   Artikel,
   Beranda,
@@ -16,12 +16,14 @@ import {
   Schedule,
   VerifikasiEmail,
   TukarPoint,
-} from "./sections";
+  Penjadwalan,
+  Transaksi,
+} from './sections'
 // import NotFound from "./components/not-found/not-found";
-import TemanSehat from "./sections/TemanSehat";
-import CommunityChatPage from "./sections/Chat";
-import ArticlePage from "./sections/ArticlePage";
-import CategoryArticle from "./sections/CategoryArticle";
+import TemanSehat from './sections/TemanSehat'
+import CommunityChatPage from './sections/Chat'
+import ArticlePage from './sections/ArticlePage'
+import CategoryArticle from './sections/CategoryArticle'
 
 const App = () => {
   return (
@@ -40,7 +42,7 @@ const App = () => {
               <Route path="/register" element={<Daftar />} />
               <Route path="/lupa-sandi" element={<LupaSandi />} />
               <Route path="/verifikasi" element={<VerifikasiEmail />} />
-              <Route path="/sandi-baru" element={<KataSandiBaru />} />
+              <Route path="/sandi-baru/:email" element={<KataSandiBaru />} />
               <Route path="/konsultasi" element={<Konsultasi />} />
               <Route path="/komunitas" element={<TemanSehat />} />
               <Route path="/komunitas/chat" element={<CommunityChatPage />} />
@@ -49,6 +51,8 @@ const App = () => {
               <Route path="/konsultasi/schedule" element={<Schedule />} />
               <Route path="/tukar-point" element={<TukarPoint />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/penjadwalan" element={<Penjadwalan/>} />
+              <Route path="/transaksi" element={<Transaksi/>} />
             </Routes>
           </div>
           <section className="xl:padding-s wide:padding-s pb-10">
@@ -57,7 +61,7 @@ const App = () => {
         </div>
       </Router>
     </main>
-  );
-};
+  )
+}
 
-export default App;
+export default App

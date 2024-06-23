@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1e0ab2c-d8f4-4dd5-814c-ffb37f2bab92" name="Changes" comment="versi 14 mengganti sequelize dengan backend pure vanilla biasa">
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sections/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sections/Payment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/Payment.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sections/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/Profile.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +84,8 @@
       <workItem from="1718884683150" duration="2326000" />
       <workItem from="1718889589753" duration="7552000" />
       <workItem from="1718943496487" duration="357000" />
+      <workItem from="1718974916730" duration="883000" />
+      <workItem from="1719029891139" duration="3375000" />
     </task>
     <task id="LOCAL-00001" summary="versi 14 mengganti sequelize dengan backend pure vanilla biasa">
       <option name="closed" value="true" />
@@ -110,11 +119,30 @@
       <option name="project" value="LOCAL" />
       <updated>1718941794531</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="versi 14 mengganti sequelize dengan backend pure vanilla biasa">
+      <option name="closed" value="true" />
+      <created>1718975012623</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718975012623</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="versi 14 mengganti sequelize dengan backend pure vanilla biasa" />

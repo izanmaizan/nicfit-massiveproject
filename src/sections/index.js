@@ -19,6 +19,8 @@ import ChatKonsultan from "./ChatKonsultasi.jsx";
 import Profile from "./Profile";
 import Schedule from "./Schedule";
 import TukarPoint from "./TukarPoint.jsx";
+import Penjadwalan from "./Penjadwalan.jsx";
+import Transaksi from "./Transaksi.jsx";
 
 export {
   Beranda,
@@ -42,4 +44,6 @@ export {
   Profile,
   Schedule,
   TukarPoint,
+  Penjadwalan,
+  Transaksi,
 };

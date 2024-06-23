@@ -7,6 +7,7 @@ const Login = () => {
   const [password, setPassword] = useState('')
   const [userrole, setRole] = useState('')
   const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const [msg, setMsg] = useState('')
 
   const navigate = useNavigate()
 
@@ -26,8 +27,6 @@ const Login = () => {
         const { role, accessToken } = response.data
         setRole(role)
         localStorage.setItem('refresh_token', accessToken)
-        setIsAuthenticated(true)
-        localStorage.setItem('cek', isAuthenticated)
 
         if (role.toLowerCase() === 'admin') {
           navigate('/admin')
@@ -40,6 +39,7 @@ const Login = () => {
         }
       } catch (error) {
         console.log('Error logging in: ', error)
+        setMsg(error)
       }
     }
   }
@@ -64,6 +64,7 @@ const Login = () => {
         <div className="order-1 lg:order-2 flex flex-col justify-center items-start px-10 ">
           <h className="text-5xl font-semibold text-black">Selamat Datang</h>
           <div className="mt-10">
+            {/* {msg && <p className="text-red-500 mb-4">{msg}</p>} */}
             <form className="max-w-sm mx-auto" onSubmit={handleLogin}>
               <label
                 htmlFor="input-group-1"
@@ -103,6 +104,7 @@ const Login = () => {
               <Link to="/lupa-sandi">
                 <p className="text-blue-500 ">Lupa Kata sandi</p>
               </Link>
+
               <button
                 type="submit"
                 className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3"

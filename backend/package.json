@@ -29,6 +29,7 @@
     "mysql2": "^3.10.1",
     "nodemailer": "^6.9.7",
     "nodemon": "^3.0.1",
+    "react-datepicker": "^7.1.0",
     "sequelize": "^6.37.3"
   }
 }

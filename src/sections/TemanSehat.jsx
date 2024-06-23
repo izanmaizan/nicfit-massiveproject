@@ -18,7 +18,7 @@ function TemanSehat() {
     }
   }, []);
 
-  const fetchUsernaname = async () => {
+  const fetchUsername = async () => {
     try {
       const response = await axios.get("http://localhost:3000/me",
           {

@@ -1,11 +1,8 @@
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import { konsultanKu } from "../assets/dummy/category-konsultan";
-<<<<<<< HEAD
-
-function Payment() {
-=======
 import { Collapse } from "../components";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Payment() {
   const [isModalSuccess, setisModalSuccess] = useState(false);
@@ -47,7 +44,6 @@ function Payment() {
     }
   };
 
->>>>>>> 4600dbc6ebf83b0c9020f625487e4753deb1ecc5
   return (
     <main
       id="komunitas"
@@ -72,13 +68,6 @@ function Payment() {
               <h2 className="text-[#2F2F2F] text-base font-medium">
                 Virtual Account Billing
               </h2>
-<<<<<<< HEAD
-              <div className="w-[230px] h-[50px] flex items-center justify-center gap-4 rounded-lg border border-[#D6E6E9] shadow-xl">
-                <span className="text-base text-primary-text font-medium">
-                  1234 087 2100 2927
-                </span>
-                <span className="text-[#929292] text-xs">
-=======
               <div
                 className="w-[230px] h-[50px] flex items-center justify-center gap-4 rounded-lg border border-[#D6E6E9] shadow-xl cursor-pointer"
                 onClick={handleSuccessClick}>
@@ -86,20 +75,12 @@ function Payment() {
                   1234 087 2100 2927
                 </span>
                 <span className="text-[#929292] text-xs flex flex-col items-center">
->>>>>>> 4600dbc6ebf83b0c9020f625487e4753deb1ecc5
                   <img src="/images/copy.svg" alt="copy" />
                   COPY
                 </span>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-          <div className=""></div>
-        </div>
-
-        <div className="h-5/6">
-          <div className="relative backdrop-blur-sm w-[800px] h-[700px] z-50"></div>
-=======
 
           <h1 className="text-[#2F2F31] text-base font-medium mt-4 mb-2">
             INFORMASI
@@ -157,7 +138,6 @@ function Payment() {
 
         <div className="h-5/6">
           <div className="relative backdrop-blur-sm w-[800px] h-[700px] z-10"></div>
->>>>>>> 4600dbc6ebf83b0c9020f625487e4753deb1ecc5
           {konsultanKu.map((item) => (
             <div
               key={item.id}
@@ -277,8 +257,6 @@ function Payment() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
       {isModalSuccess && (
         <div
           id="modal-overlay"
@@ -345,15 +323,16 @@ function Payment() {
               Selamat Akun Anda Sudah Dalam Versi Pro
             </p>
             <img src="/public/images/welcome.svg" alt="welcome" />
-            <button
-              onClick={handleProClick}
-              className="w-[230px] h-[44px] bg-[#508CAE] text-white rounded-[10px] hover:bg-primary-text-hover mt-5">
-              Selanjutnya
-            </button>
+            <Link to="/penjadwalan">
+              <button
+                onClick={handleProClick}
+                className="w-[230px] h-[44px] bg-[#508CAE] text-white rounded-[10px] hover:bg-primary-text-hover mt-5">
+                Selanjutnya
+              </button>
+            </Link>
           </div>
         </div>
       )}
->>>>>>> 4600dbc6ebf83b0c9020f625487e4753deb1ecc5
     </main>
   );
 }

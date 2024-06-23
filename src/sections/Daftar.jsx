@@ -21,7 +21,7 @@ const Daftar = () => {
       return
     } else {
       try {
-        await axios.post('http://localhost:3000/users', {
+        await axios.post('http://localhost:3000/register', {
           username: username,
           email: email,
           password: password,
