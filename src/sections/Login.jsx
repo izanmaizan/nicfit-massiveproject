@@ -1,48 +1,49 @@
-import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import axios from 'axios'
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Login = () => {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [userrole, setRole] = useState('')
-  const [isAuthenticated, setIsAuthenticated] = useState(false)
-  const [msg, setMsg] = useState('')
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [userrole, setRole] = useState("");
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [msg, setMsg] = useState("");
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (!email || !password) {
-      console.log('Please fill in all fields')
-      return
+      console.log("Please fill in all fields");
+      return;
     } else {
       try {
-        const response = await axios.post('http://localhost:3000/login', {
+        // const response = await axios.post('http://localhost:3000/login', {
+        const response = await axios.post("https://nicfit.vercel.app/login", {
           email: email,
           password: password,
-        })
+        });
 
-        const { role, accessToken } = response.data
-        setRole(role)
-        localStorage.setItem('refresh_token', accessToken)
+        const { role, accessToken } = response.data;
+        setRole(role);
+        localStorage.setItem("refresh_token", accessToken);
 
-        if (role.toLowerCase() === 'admin') {
-          navigate('/admin')
-          window.location.reload()
-        } else if (role.toLowerCase() === 'user') {
-          navigate('/')
-          window.location.reload()
+        if (role.toLowerCase() === "admin") {
+          navigate("/admin");
+          window.location.reload();
+        } else if (role.toLowerCase() === "user") {
+          navigate("/");
+          window.location.reload();
         } else {
-          console.log('Role not recognized')
+          console.log("Role not recognized");
         }
       } catch (error) {
-        console.log('Error logging in: ', error)
-        setMsg(error)
+        console.log("Error logging in: ", error);
+        setMsg(error);
       }
     }
-  }
+  };
 
   return (
     <section className="bg-white px-5 py-28 h-screen w-screen">
@@ -68,8 +69,7 @@ const Login = () => {
             <form className="max-w-sm mx-auto" onSubmit={handleLogin}>
               <label
                 htmlFor="input-group-1"
-                className="block mb-2 text-sm font-medium text-gray-900"
-              >
+                className="block mb-2 text-sm font-medium text-gray-900">
                 Your Email
               </label>
               <div className="relative mb-6">
@@ -87,8 +87,7 @@ const Login = () => {
 
               <label
                 htmlFor="website-admin"
-                className="block mb-2 text-sm font-medium text-gray-900 "
-              >
+                className="block mb-2 text-sm font-medium text-gray-900 ">
                 Password
               </label>
               <div className="flex mb-5">
@@ -107,8 +106,7 @@ const Login = () => {
 
               <button
                 type="submit"
-                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3"
-              >
+                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3">
                 Submit
               </button>
             </form>
@@ -116,7 +114,7 @@ const Login = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
