@@ -22,7 +22,8 @@ const start = async function () {
 
 // Configure CORS
 const corsOptions = {
-  origin: "http://localhost:5173",
+  // origin: "http://localhost:5173",
+  origin: "https://nicfit.vercel.app",
   methods: "GET, POST, PUT, PATCH, DELETE, OPTIONS",
   credentials: true, // enable set cookie
   optionsSuccessStatus: 204,
