@@ -19,8 +19,8 @@ const Login = () => {
       return;
     } else {
       try {
-        // const response = await axios.post('http://localhost:3000/login', {
-        const response = await axios.post("https://nicfit.vercel.app/login", {
+        const response = await axios.post("http://localhost:3000/login", {
+          // const response = await axios.post("https://nicfit.vercel.app/login", {
           email: email,
           password: password,
         });
