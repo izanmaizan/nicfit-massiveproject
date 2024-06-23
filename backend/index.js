@@ -22,25 +22,24 @@ const start = async function () {
 
 // Configure CORS
 const corsOptions = {
-  // origin: "http://localhost:5173",
-  origin: "https://nicfit.vercel.app",
+  origin: "https://nicfit.vercel.app", // Pastikan ini sesuai dengan origin yang benar
   methods: "GET, POST, PUT, PATCH, DELETE, OPTIONS",
   credentials: true, // enable set cookie
   optionsSuccessStatus: 204,
   allowedHeaders: "Content-Type, Authorization",
 };
 
+// Use CORS for all routes
 app.use(cors(corsOptions));
+app.options("*", cors(corsOptions)); // Preflight requests
+
 app.use(cookieParser());
 app.use(express.json());
 app.use(fileUpload());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-// Set additional headers to handle preflight requests
-app.options("*", cors(corsOptions));
-
-// Route-specific CORS
+// Route-specific CORS (not necessary if you use the global one)
 app.use("/users", cors(corsOptions));
 
 app.use(router);
