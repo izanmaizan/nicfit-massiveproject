@@ -49,19 +49,19 @@ function DashboardPage() {
       kegiatan: "Jalan Santai",
       detail: "Meredakan Stress",
       waktu: "30",
-      img: "../../public/assets/Jalan.svg",
+      img: "../assets/Jalan.svg",
     },
     {
       kegiatan: "Jalan Cepat",
       detail: "Tingkatkan Sirkulasi Darah",
       waktu: "30",
-      img: "../../public/assets/Jalan.svg",
+      img: "../assets/Jalan.svg",
     },
     {
       kegiatan: "Lari Treadmill",
       detail: "Bantu Fungsi Organ",
       waktu: "30",
-      img: "../../public/assets/Jalan.svg",
+      img: "../assets/Jalan.svg",
     },
   ];
 
@@ -70,31 +70,31 @@ function DashboardPage() {
       kegiatan: "Kapalbhati pranayama",
       detail: "Detoksifikasi Diri",
       waktu: "30",
-      img: "../../public/assets/yoga1.svg",
+      img: "../assets/yoga1.svg",
     },
     {
       kegiatan: "Bhujnagasana",
       detail: "Tingkatkan sirkulasi darah",
       waktu: "30",
-      img: "../../public/assets/yoga2.svg",
+      img: "../assets/yoga2.svg",
     },
     {
       kegiatan: "Sarvangasana",
       detail: "Bantu Fungsi Organ",
       waktu: "30",
-      img: "../../public/assets/yoga3.svg",
+      img: "../assets/yoga3.svg",
     },
     {
       kegiatan: "Shishuasana",
       detail: "Bantu Kurangi Stres",
       waktu: "30",
-      img: "../../public/assets/yoga3.svg",
+      img: "../assets/yoga3.svg",
     },
     {
       kegiatan: "Shavasana",
       detail: "Bantu Remajakan Tubuh",
       waktu: "30",
-      img: "../../public/assets/yoga2.svg",
+      img: "../assets/yoga2.svg",
     },
   ];
 
@@ -103,25 +103,25 @@ function DashboardPage() {
       kegiatan: "Gaya Bebas",
       detail: "Detoksifikasi diri",
       waktu: "30",
-      img: "../../public/assets/berenang.svg",
+      img: "../assets/berenang.svg",
     },
     {
       kegiatan: "Gaya Dada",
       detail: "Tingkatkan Sirkulasi Darah",
       waktu: "30",
-      img: "../../public/assets/berenang.svg",
+      img: "../assets/berenang.svg",
     },
     {
       kegiatan: "Gaya Kupu-Kupu",
       detail: "Bantu Fungsi Organ",
       waktu: "30",
-      img: "../../public/assets/berenang.svg",
+      img: "../assets/berenang.svg",
     },
     {
       kegiatan: "Gaya Punggung",
       detail: "Bantu Kurangi Stress",
       waktu: "30",
-      img: "../../public/assets/berenang.svg",
+      img: "../assets/berenang.svg",
     },
   ];
 
@@ -130,25 +130,25 @@ function DashboardPage() {
       kegiatan: "Jarak Pendek",
       detail: "Meredakan Stress",
       waktu: "30",
-      img: "../../public/assets/jogging.svg",
+      img: "../assets/jogging.svg",
     },
     {
       kegiatan: "Jarak Menengah",
       detail: "Tingkatkan Sirkulasi Darah",
       waktu: "30",
-      img: "../../public/assets/jogging.svg",
+      img: "../assets/jogging.svg",
     },
     {
       kegiatan: "Estafet",
       detail: "Bantu Fungsi Organ",
       waktu: "30",
-      img: "../../public/assets/jogging.svg",
+      img: "../assets/jogging.svg",
     },
     {
       kegiatan: "Fun Run",
       detail: "Bantu Kurangi Stress",
       waktu: "30",
-      img: "../../public/assets/jogging.svg",
+      img: "../assets/jogging.svg",
     },
   ];
 

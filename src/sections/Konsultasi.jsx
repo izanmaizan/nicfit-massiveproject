@@ -418,7 +418,7 @@ function Konsultasi() {
               </p>
             </div>
             <div className="pt-20">
-              <img src="/public/images/belum_login2.svg" alt="belum login" />
+              <img src="../images/belum_login2.svg" alt="belum login" />
             </div>
           </section>
 
