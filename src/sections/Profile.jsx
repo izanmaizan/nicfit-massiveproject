@@ -75,7 +75,7 @@ const InformasiAkunPage = () => {
       };
 
       const response = await axios.put(
-        "http://localhost:3000/user/update",
+        "https://nicfit-backend.vercel.app/user/update",
         requestBody,
         config
       );
