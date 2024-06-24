@@ -24,10 +24,10 @@ const start = async function () {
 const corsOptions = {
   origin: function (origin, callback) {
     const allowedOrigins = [
-      "http://localhost:5173",
+      // "http://localhost:5173",
       "https://nicfit.vercel.app",
-      "http://nicfit.my.id",
-      "https://nicfit.my.id", // Tambahkan juga versi HTTPS jika ada
+      // "http://nicfit.my.id",
+      // "https://nicfit.my.id", // Tambahkan juga versi HTTPS jika ada
     ];
     if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
       callback(null, true);
