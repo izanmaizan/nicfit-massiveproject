@@ -177,7 +177,7 @@ function DashboardPage() {
                   />
                 </div>
                 <div className="flex-row content-center">
-                  <h1 className="text-[24px] font-bold">Yoga Aghata</h1>
+                  <h1 className="text-[24px] font-bold">{username}</h1>
                   <p className="text-[16px]">Statistik Kamu</p>
                 </div>
               </div>
@@ -523,7 +523,7 @@ function DashboardPage() {
                     />
                   </div>
                   <div className="flex-row content-center">
-                    <h1 className="text-[24px] font-bold">Yoga Aghata</h1>
+                    <h1 className="text-[24px] font-bold">{username}</h1>
                     <p className="text-[16px]">Statistik Kamu</p>
                   </div>
                 </div>
