@@ -22,10 +22,21 @@ const start = async function () {
 
 // Configure CORS
 const corsOptions = {
-  origin: "http://localhost:5173", // Pastikan ini sesuai dengan origin yang benar
-  // origin: "https://nicfit.vercel.app", // Pastikan ini sesuai dengan origin yang benar
+  origin: function (origin, callback) {
+    const allowedOrigins = [
+      "http://localhost:5173",
+      "https://nicfit.vercel.app",
+      "http://nicfit.my.id",
+      "https://nicfit.my.id", // Tambahkan juga versi HTTPS jika ada
+    ];
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   methods: "GET, POST, PUT, PATCH, DELETE, OPTIONS",
-  credentials: true, // enable set cookie
+  credentials: true,
   optionsSuccessStatus: 204,
   allowedHeaders: "Content-Type, Authorization",
 };
