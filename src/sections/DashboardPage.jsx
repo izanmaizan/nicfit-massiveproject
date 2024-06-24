@@ -31,7 +31,7 @@ function DashboardPage() {
 
   const fetchUsername = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/me", {
+      const response = await axios.get("https://nicfit-backend.vercel.app/me", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("refresh_token")}`,
         },

@@ -1,39 +1,39 @@
-import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import axios from 'axios'
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Daftar = () => {
-  const navigate = useNavigate()
-  const [username, setUsername] = useState('')
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [confirmPassword, setConfirmPassword] = useState('')
-  const [msg, setMsg] = useState('')
+  const navigate = useNavigate();
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [msg, setMsg] = useState("");
 
   const handleRegister = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (!email || !username || !password || !confirmPassword) {
-      setMsg('Please fill in all fields')
-      return
+      setMsg("Please fill in all fields");
+      return;
     } else if (password !== confirmPassword) {
-      setMsg('Passwords do not match')
-      return
+      setMsg("Passwords do not match");
+      return;
     } else {
       try {
-        await axios.post('http://localhost:3000/register', {
+        await axios.post("https://nicfit-backend.vercel.app/register", {
           username: username,
           email: email,
           password: password,
-        })
-        navigate('/login')
-        setMsg('Registration successful')
+        });
+        navigate("/login");
+        setMsg("Registration successful");
       } catch (error) {
-        console.log('Error data: ', error)
-        setMsg('Error registering user')
+        console.log("Error data: ", error);
+        setMsg("Error registering user");
       }
     }
-  }
+  };
 
   return (
     <section className="bg-white px-5 py-28 h-screen w-screen">
@@ -58,8 +58,7 @@ const Daftar = () => {
             <form className="max-w-sm mx-auto" onSubmit={handleRegister}>
               <label
                 htmlFor="input-group-1"
-                className="block mb-2 text-sm font-medium text-gray-900"
-              >
+                className="block mb-2 text-sm font-medium text-gray-900">
                 Username
               </label>
               <div className="relative mb-6">
@@ -75,8 +74,7 @@ const Daftar = () => {
               </div>
               <label
                 htmlFor="website-admin"
-                className="block mb-2 text-sm font-medium text-gray-900 "
-              >
+                className="block mb-2 text-sm font-medium text-gray-900 ">
                 Email
               </label>
               <div className="flex mb-5">
@@ -93,8 +91,7 @@ const Daftar = () => {
 
               <label
                 htmlFor="input-group-3"
-                className="block mb-2 text-sm font-medium text-gray-900"
-              >
+                className="block mb-2 text-sm font-medium text-gray-900">
                 Kata Sandi
               </label>
               <div className="relative mb-6">
@@ -111,8 +108,7 @@ const Daftar = () => {
 
               <label
                 htmlFor="input-group-4"
-                className="block mb-2 text-sm font-medium text-gray-900"
-              >
+                className="block mb-2 text-sm font-medium text-gray-900">
                 Ulangi Kata Sandi
               </label>
               <div className="relative mb-6">
@@ -131,8 +127,7 @@ const Daftar = () => {
 
               <button
                 type="submit"
-                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-blue-800 mt-3"
-              >
+                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-blue-800 mt-3">
                 Submit
               </button>
             </form>
@@ -140,7 +135,7 @@ const Daftar = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Daftar
+export default Daftar;

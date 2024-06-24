@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import { useLocation, useNavigate, useParams } from 'react-router-dom'
-import { lupa } from '../assets/images'
-import axios from 'axios'
+import { useState } from "react";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { lupa } from "../assets/images";
+import axios from "axios";
 
 const KataSandiBaru = () => {
-  const [password, setPassword] = useState('')
-  const [confirmPassword, setConfirmPassword] = useState('')
-  const navigate = useNavigate()
-  const location = useLocation()
-  const { email } = useParams()
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { email } = useParams();
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (password !== confirmPassword) {
-      alert('Passwords do not match!')
-      return
+      alert("Passwords do not match!");
+      return;
     }
 
-    console.log('dataemail', email)
+    console.log("dataemail", email);
 
     try {
-      const response = await axios.put('http://localhost:3000/user/password', {
-        email,
-        password,
-      })
-      console.log(response.data)
-      navigate('/login')
+      const response = await axios.put(
+        "https://nicfit-backend.vercel.app/user/password",
+        {
+          email,
+          password,
+        }
+      );
+      console.log(response.data);
+      navigate("/login");
     } catch (error) {
-      console.error('Error updating password:', error)
+      console.error("Error updating password:", error);
     }
-  }
+  };
 
   return (
     <div>
@@ -46,8 +49,7 @@ const KataSandiBaru = () => {
             <form onSubmit={handleSubmit}>
               <label
                 htmlFor="new-password"
-                className="block mb-2 text-sm font-medium text-gray-900 mt-7"
-              >
+                className="block mb-2 text-sm font-medium text-gray-900 mt-7">
                 Kata Sandi
               </label>
               <div className="relative mb-6">
@@ -63,8 +65,7 @@ const KataSandiBaru = () => {
               </div>
               <label
                 htmlFor="confirm-password"
-                className="block mb-2 text-sm font-medium text-gray-900 mt-7"
-              >
+                className="block mb-2 text-sm font-medium text-gray-900 mt-7">
                 Konfirmasi Kata Sandi
               </label>
               <div className="relative mb-6">
@@ -80,8 +81,7 @@ const KataSandiBaru = () => {
               </div>
               <button
                 type="submit"
-                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3"
-              >
+                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3">
                 Submit
               </button>
             </form>
@@ -96,7 +96,7 @@ const KataSandiBaru = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default KataSandiBaru
+export default KataSandiBaru;
