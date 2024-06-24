@@ -505,7 +505,7 @@ function DashboardPage() {
               </p>
             </div>
             <div className="pt-20">
-              <img src="/public/images/belum_login.svg" alt="belum login" />
+              <img src="../images/belum_login.svg" alt="belum login" />
             </div>
           </section>
 
