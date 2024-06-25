@@ -1,7 +1,7 @@
 export const articles = [
   {
     id: 1,
-    images: "/images/article-parent.png",
+    images: "../images/article-parent.png",
     category: "kecanduan",
     slug: "mengakhiri-kebiasaan-merokok",
     title: 'Mengakhiri Kebiasaan <span style="color:#508CAE">Merokok</span>',
@@ -13,7 +13,7 @@ export const articles = [
   },
   {
     id: 2,
-    images: "/images/article-kecanduan.png",
+    images: "../images/article-kecanduan.png",
     category: "emosional",
     slug: "panduan-holistik-untuk-mengatasi-ketergantungan",
     title:
@@ -26,7 +26,7 @@ export const articles = [
   },
   {
     id: 3,
-    images: "/images/article-rokok.png",
+    images: "../images/article-rokok.png",
     category: "kecanduan",
     slug: "solusi-untuk-generasi-penerus-yang-sehat",
     title:
