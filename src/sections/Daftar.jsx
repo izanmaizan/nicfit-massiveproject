@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import {useState} from "react";
+import {Link, useNavigate} from "react-router-dom";
+import axios from "../utils/axios.js";
 
 const Daftar = () => {
   const navigate = useNavigate();
@@ -15,13 +15,13 @@ const Daftar = () => {
 
     if (!email || !username || !password || !confirmPassword) {
       setMsg("Please fill in all fields");
-      return;
+
     } else if (password !== confirmPassword) {
       setMsg("Passwords do not match");
-      return;
+
     } else {
       try {
-        await axios.post("https://nicfit-backend.vercel.app/register", {
+        await axios.post("/register", {
           username: username,
           email: email,
           password: password,

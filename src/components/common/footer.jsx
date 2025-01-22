@@ -81,16 +81,8 @@
 //   )
 // }
 
-import {
-  android,
-  apple,
-  check,
-  chrome,
-  linux,
-  nicfit,
-  windows,
-} from "../../assets/icons";
-import { Button, PlatformsList } from "../../components";
+import {android, apple, check, chrome, linux, nicfit, windows,} from "../../assets/icons";
+import {Button, PlatformsList} from "../../components";
 
 const Footer = () => {
   return (

@@ -1,5 +1,5 @@
-import { playStore } from "../assets/icons";
-import { female_doctor } from "../assets/images";
+import {playStore} from "../assets/icons";
+import {female_doctor} from "../assets/images";
 // import { Button } from "../components";
 import PlayStore from "../components/PlayStore";
 

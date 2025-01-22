@@ -1,4 +1,4 @@
-import { carbonDashboard, community, paper, phone } from "../assets/icons";
+import {carbonDashboard, community, paper, phone} from "../assets/icons";
 // import { ReviewCard } from "../components";
 import Card from "../components/Card";
 // import { reviews } from "../constants";

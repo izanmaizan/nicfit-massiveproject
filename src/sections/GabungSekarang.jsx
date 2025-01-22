@@ -1,6 +1,6 @@
-import { Button } from "../components";
-import { check } from "../assets/icons";
-import { doctors } from "../assets/images";
+import {Button} from "../components";
+import {check} from "../assets/icons";
+import {doctors} from "../assets/images";
 import Check from "../components/Check";
 
 const GabungSekarang = () => {

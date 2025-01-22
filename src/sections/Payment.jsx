@@ -1,8 +1,8 @@
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
-import { konsultanKu } from "../assets/dummy/category-konsultan";
-import { Collapse } from "../components";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import {FaChevronLeft, FaChevronRight} from "react-icons/fa";
+import {konsultanKu} from "../assets/dummy/category-konsultan";
+import {Collapse} from "../components";
+import {useEffect, useState} from "react";
+import {Link} from "react-router-dom";
 
 function Payment() {
   const [isModalSuccess, setisModalSuccess] = useState(false);
@@ -265,7 +265,7 @@ function Payment() {
           <div
             className={`w-[320px] bg-white p-6 rounded-3xl flex flex-col items-center transition-all duration-300 transform ${modalClass}`}
             onClick={(e) => e.stopPropagation()}>
-            <img src="../images/bcalogo.svg" alt="logo bca" />
+            <img src="/images/bcalogo.svg" alt="logo bca" />
             <h3 className="text-base font-semibold mt-5 mb-2">
               Transaksi Telah Sukses
             </h3>
@@ -290,13 +290,13 @@ function Payment() {
             </div>
             <div className="w-full flex flex-row justify-between mt-20">
               <div className="flex gap-2">
-                <img src="../assets/download.svg" alt="download" />
+                <img src="/assets/download.svg" alt="download" />
                 <span className="text-primary-text text-sm font-medium">
                   Download
                 </span>
               </div>
               <div className="flex gap-2">
-                <img src="../assets/share.svg" alt="download" />
+                <img src="/assets/share.svg" alt="download" />
                 <span className="text-primary-text text-sm font-medium">
                   Share
                 </span>
@@ -322,7 +322,7 @@ function Payment() {
             <p className="text-xs font-normal mt-3 mb-7">
               Selamat Akun Anda Sudah Dalam Versi Pro
             </p>
-            <img src="../images/welcome.svg" alt="welcome" />
+            <img src="/images/welcome.svg" alt="welcome" />
             <Link to="/penjadwalan">
               <button
                 onClick={handleProClick}

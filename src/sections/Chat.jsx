@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { CiFaceSmile } from "react-icons/ci";
-import { FaSearch } from "react-icons/fa";
+import {useState} from "react";
+import {CiFaceSmile} from "react-icons/ci";
+import {FaSearch} from "react-icons/fa";
 
 function CommunityChatPage() {
   const chat = [

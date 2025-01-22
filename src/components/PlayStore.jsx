@@ -1,4 +1,4 @@
-import { googlePlay } from "../assets/icons";
+import {googlePlay} from "../assets/icons";
 
 const PlayStore = ({
   sublabel,

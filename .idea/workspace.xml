@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1e0ab2c-d8f4-4dd5-814c-ffb37f2bab92" name="Changes" comment="memperbaiki kode" />
+    <list default="true" id="d1e0ab2c-d8f4-4dd5-814c-ffb37f2bab92" name="Changes" comment="env sample change">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +38,12 @@
     &quot;accountId&quot;: &quot;51db5c67-92c6-4003-bdce-0225747d154a&quot;
   }
 }</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -41,20 +52,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/PINTASAN/Unduhan/Nicfit v14/Nicfit v14/nicfit&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.1.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "E:/Infinite Learning/Hosting/Batch 6/Nicfit/nicfit-frontend/src/utils",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.1.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -63,6 +77,29 @@
         <entry key="com.intellij.reactbuddy.storybook" value="false" />
       </map>
     </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Infinite Learning\Hosting\Batch 6\Nicfit\nicfit-frontend\src\utils" />
+      <recent name="E:\Infinite Learning\Hosting\Batch 6\Nicfit\nicfit-frontend" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -85,6 +122,7 @@
       <workItem from="1718974916730" duration="883000" />
       <workItem from="1719029891139" duration="3375000" />
       <workItem from="1719220482280" duration="6300000" />
+      <workItem from="1737511604349" duration="7243000" />
     </task>
     <task id="LOCAL-00001" summary="versi 14 mengganti sequelize dengan backend pure vanilla biasa">
       <option name="closed" value="true" />
@@ -134,13 +172,74 @@
       <option name="project" value="LOCAL" />
       <updated>1719226072507</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="remove node modules and add gitignore">
+      <option name="closed" value="true" />
+      <created>1737511778859</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1737511778859</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add axios interceptor and implement env">
+      <option name="closed" value="true" />
+      <created>1737513348426</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1737513348426</updated>
+    </task>
+    <task id="LOCAL-00009" summary="import cleanup">
+      <option name="closed" value="true" />
+      <created>1737513794102</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1737513794102</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Optimize imports and fix images path">
+      <option name="closed" value="true" />
+      <created>1737514508393</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1737514508393</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fix images path">
+      <option name="closed" value="true" />
+      <created>1737514921709</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1737514921709</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix image path">
+      <option name="closed" value="true" />
+      <created>1737520286650</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1737520286650</updated>
+    </task>
+    <task id="LOCAL-00013" summary="env sample change">
+      <option name="closed" value="true" />
+      <created>1737520438046</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1737520438046</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="b86c4d6f-1493-4f60-945b-f5ef6350068c" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -148,11 +247,43 @@
             <State />
           </value>
         </entry>
+        <entry key="b86c4d6f-1493-4f60-945b-f5ef6350068c">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:E:/Infinite Learning/Hosting/Batch 6/Nicfit/nicfit-frontend/node_modules/flatted" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="versi 14 mengganti sequelize dengan backend pure vanilla biasa" />
-    <option name="LAST_COMMIT_MESSAGE" value="versi 14 mengganti sequelize dengan backend pure vanilla biasa" />
+    <MESSAGE value="remove node modules and add gitignore" />
+    <MESSAGE value="add axios interceptor and implement env" />
+    <MESSAGE value="import cleanup" />
+    <MESSAGE value="Optimize imports and fix images path" />
+    <MESSAGE value="fix images path" />
+    <MESSAGE value="fix image path" />
+    <MESSAGE value="env sample change" />
+    <option name="LAST_COMMIT_MESSAGE" value="env sample change" />
   </component>
 </project>

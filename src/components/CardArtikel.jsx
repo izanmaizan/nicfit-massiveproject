@@ -1,4 +1,4 @@
-  import { arrowRight } from "../assets/icons";
+import {arrowRight} from "../assets/icons";
 
 const CardArtikel = ({ img, label, desc, link }) => {
   return (

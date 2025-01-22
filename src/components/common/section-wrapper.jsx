@@ -1,4 +1,4 @@
-import { cn } from "../../lib/tailwind-utils";
+import {cn} from "../../lib/tailwind-utils";
 import PropTypes from "prop-types";
 
 export default function SectionWrapper({ className, children }) {

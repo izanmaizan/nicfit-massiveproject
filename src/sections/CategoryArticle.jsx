@@ -1,19 +1,18 @@
-import React from "react";
 import SectionWrapper from "../components/common/section-wrapper";
-import { Input } from "../components/ui/input";
-import { capitalizeFirstLetter } from "../lib/strings";
-import { categoryArticle } from "../assets/dummy/category-article";
-import { Card, CardContent, CardFooter } from "../components/ui/card";
+import {Input} from "../components/ui/input";
+import {capitalizeFirstLetter} from "../lib/strings";
+import {categoryArticle} from "../assets/dummy/category-article";
+import {Card, CardContent, CardFooter} from "../components/ui/card";
 import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
+    Pagination,
+    PaginationContent,
+    PaginationEllipsis,
+    PaginationItem,
+    PaginationLink,
+    PaginationNext,
+    PaginationPrevious,
 } from "../components/ui/pagination";
-import { Link, useParams } from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 
 function CategoryArticle() {
   const { category } = useParams();

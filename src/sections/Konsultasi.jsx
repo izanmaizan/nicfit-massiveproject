@@ -1,14 +1,12 @@
-import { useState, useEffect } from "react";
-import { FaChevronRight, FaChevronLeft, FaSearch } from "react-icons/fa";
-import { konsultasi } from "../assets/images";
-import { konsultan, konsultanKu } from "../assets/dummy/category-konsultan";
-import { Bank, Button } from "../components";
-import { Link } from "react-router-dom";
-import axios from "axios";
+import {useEffect, useState} from "react";
+import {FaChevronLeft, FaChevronRight, FaSearch} from "react-icons/fa";
+import {konsultasi} from "../assets/images";
+import {konsultan, konsultanKu} from "../assets/dummy/category-konsultan";
+import {Bank, Button} from "../components";
+import {Link} from "react-router-dom";
 
-import bca from "/images/bca.svg";
-import bni from "/images/bni.svg";
-import bri from "/images/bri.svg";
+import axios from "../utils/axios.js";
+
 // import Payment from "./Payment";
 
 function Konsultasi() {
@@ -29,7 +27,7 @@ function Konsultasi() {
 
   const fetchUsername = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/me", {
+      const response = await axios.get("/me", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("refresh_token")}`,
         },
@@ -378,17 +376,17 @@ function Konsultasi() {
                 <p className="text-[10px] text-[#AEAEAE] mt-2">Pilih Bank</p>
                 <div className="flex flex-row gap-[15px] mt-6">
                   <Bank
-                    imgLogo={bca}
+                    imgLogo={"/images/bca.svg"}
                     title="BCA"
                     linkTo={"/konsultasi/payment"}
                   />
                   <Bank
-                    imgLogo={bni}
+                    imgLogo={"/images/bni.svg"}
                     title="BNI"
                     linkTo={"/konsultasi/payment"}
                   />
                   <Bank
-                    imgLogo={bri}
+                    imgLogo={"/images/bri.svg"}
                     title="BRI"
                     linkTo={"/konsultasi/payment"}
                   />
@@ -418,7 +416,7 @@ function Konsultasi() {
               </p>
             </div>
             <div className="pt-20">
-              <img src="../images/belum_login2.svg" alt="belum login" />
+              <img src="/images/belum_login2.svg" alt="belum login" />
             </div>
           </section>
 

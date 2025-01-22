@@ -1,6 +1,6 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import {useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
+import axios from "../utils/axios.js";
 
 const InformasiAkunPage = () => {
   const [userData, setUserData] = useState({
@@ -24,7 +24,7 @@ const InformasiAkunPage = () => {
         };
 
         const response = await axios.get(
-          "https://nicfit-backend.vercel.app/Me",
+          "/Me",
           config
         );
         const { name, email, phone, alamat } = response.data;
@@ -75,7 +75,7 @@ const InformasiAkunPage = () => {
       };
 
       const response = await axios.put(
-        "https://nicfit-backend.vercel.app/user/update",
+        "/user/update",
         requestBody,
         config
       );

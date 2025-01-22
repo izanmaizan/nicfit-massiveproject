@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react"
+import {useCallback, useEffect, useState} from "react"
 
 const useScroll = () => {
   const [isScrolled, setIsScrolled] = useState(false)

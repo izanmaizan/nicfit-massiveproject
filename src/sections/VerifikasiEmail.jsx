@@ -1,4 +1,4 @@
-import { lupa } from "../assets/images";
+import {lupa} from "../assets/images";
 
 const VerifikasiEmail = () => {
   return (

@@ -1,6 +1,6 @@
-import { Button } from "../components";
-import { check } from "../assets/icons";
-import { female_doctor2 } from "../assets/images";
+import {Button} from "../components";
+import {check} from "../assets/icons";
+import {female_doctor2} from "../assets/images";
 import Check from "../components/Check";
 
 const CariKonsultasi = () => {

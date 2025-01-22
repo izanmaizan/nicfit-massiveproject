@@ -1,13 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { FaStar } from "react-icons/fa";
+import {useEffect, useState} from "react";
+import {FaStar} from "react-icons/fa";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { Link, useNavigate } from "react-router-dom"; // Ganti Redirect dengan useNavigate
-import { Bank, Button } from "../components";
-
-import bca from "/images/bca.svg";
-import bni from "/images/bni.svg";
-import bri from "/images/bri.svg";
+import {Bank} from "../components";
 
 function Penjadwalan() {
   // Ganti nama fungsi menjadi Penjadwalan
@@ -18,16 +13,6 @@ function Penjadwalan() {
   const [selectedPeriod, setSelectedPeriod] = useState("Pagi");
   const [isModalPayment, setisModalPayment] = useState(false);
   const [modalClass, setModalClass] = useState("modal-close");
-  const [popupCount, setPopupCount] = useState(0);
-  const navigate = useNavigate(); // Tambahkan useNavigate
-
-  const handlePopupChoice = (choice) => {
-    if (popupCount === 0) {
-      setPopupCount(popupCount + 1);
-    } else {
-      navigate(choice === "bank1" ? "/page1" : "/page2"); // Gunakan navigate
-    }
-  };
 
   const handleCloseModal = () => {
     setModalClass("modal-close");
@@ -107,9 +92,9 @@ function Penjadwalan() {
             <h1 className="text-base font-semibold">Pilih Metode Pembayaran</h1>
             <p className="text-[10px] text-[#AEAEAE] mt-2">Pilih Bank</p>
             <div className="flex flex-row gap-[15px] mt-6">
-              <Bank imgLogo={bca} title="BCA" linkTo={"/transaksi"} />
-              <Bank imgLogo={bni} title="BNI" linkTo={"/transaksi"} />
-              <Bank imgLogo={bri} title="BRI" linkTo={"/transaksi"} />
+              <Bank imgLogo={"/images/bca.svg"} title="BCA" linkTo={"/transaksi"} />
+              <Bank imgLogo={"/images/bni.svg"} title="BNI" linkTo={"/transaksi"} />
+              <Bank imgLogo={"/images/bri.svg"} title="BRI" linkTo={"/transaksi"} />
             </div>
           </div>
         </div>

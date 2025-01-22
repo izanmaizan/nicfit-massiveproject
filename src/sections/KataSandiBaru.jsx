@@ -1,13 +1,12 @@
-import { useState } from "react";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { lupa } from "../assets/images";
-import axios from "axios";
+import {useState} from "react";
+import {useNavigate, useParams} from "react-router-dom";
+import {lupa} from "../assets/images";
+import axios from "../utils/axios.js";
 
 const KataSandiBaru = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const navigate = useNavigate();
-  const location = useLocation();
   const { email } = useParams();
 
   const handleSubmit = async (e) => {
@@ -21,7 +20,7 @@ const KataSandiBaru = () => {
 
     try {
       const response = await axios.put(
-        "https://nicfit-backend.vercel.app/user/password",
+        "/user/password",
         {
           email,
           password,

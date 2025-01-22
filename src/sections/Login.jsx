@@ -1,12 +1,11 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import {useState} from "react";
+import {Link, useNavigate} from "react-router-dom";
+import axios from "../utils/axios.js";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [userrole, setRole] = useState("");
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [msg, setMsg] = useState("");
 
   const navigate = useNavigate();
@@ -16,10 +15,10 @@ const Login = () => {
 
     if (!email || !password) {
       console.log("Please fill in all fields");
-      return;
+
     } else {
       try {
-        const response = await axios.post("https://nicfit-backend.vercel.app/login", {
+        const response = await axios.post("/login", {
           // const response = await axios.post("https://nicfit.vercel.app/login", {
           email: email,
           password: password,

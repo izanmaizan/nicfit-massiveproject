@@ -1,12 +1,5 @@
 // import { Nav } from "../components";
-import {
-  Jumbotron,
-  //   Footer,
-  LayananKami,
-  CariKonsultasi,
-  GabungSekarang,
-  LihatArtikel,
-} from "./";
+import {CariKonsultasi, GabungSekarang, Jumbotron, LayananKami, LihatArtikel,} from "./";
 
 const Beranda = () => {
   return (

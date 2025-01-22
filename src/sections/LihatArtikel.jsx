@@ -1,5 +1,5 @@
-import { manypeople, no_smoking, stop_smoking } from "../assets/images";
-import { Button2, CardArtikel } from "../components";
+import {manypeople, no_smoking, stop_smoking} from "../assets/images";
+import {Button2, CardArtikel} from "../components";
 
 const LihatArtikel = () => {
   return (

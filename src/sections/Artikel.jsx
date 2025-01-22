@@ -1,19 +1,12 @@
-import { articles } from "../assets/dummy/article";
-import { categoryArticle } from "../assets/dummy/category-article";
+import {articles} from "../assets/dummy/article";
+import {categoryArticle} from "../assets/dummy/category-article";
 import SectionWrapper from "../components/common/section-wrapper";
 import NotFound from "../components/not-found/not-found";
-import { Card, CardContent, CardFooter } from "../components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "../components/ui/carousel";
+import {Card, CardContent, CardFooter} from "../components/ui/card";
+import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious,} from "../components/ui/carousel";
 import AppLayout from "../layouts/app-layout";
 // import { capitalizeFirstLetter } from "../lib/tailwind-utils";
-import React from "react";
-import { Link, useParams } from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 
 export default function Artikel() {
   const { slug } = useParams();

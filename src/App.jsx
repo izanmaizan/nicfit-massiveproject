@@ -1,23 +1,23 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Nav } from './components';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {Nav} from './components';
 import {
-  Artikel,
-  Beranda,
-  ChatKonsultan,
-  Daftar,
-  DashboardPage,
-  Footer,
-  KataSandiBaru,
-  Konsultasi,
-  Login,
-  LupaSandi,
-  Payment,
-  Profile,
-  Schedule,
-  VerifikasiEmail,
-  TukarPoint,
-  Penjadwalan,
-  Transaksi,
+    Artikel,
+    Beranda,
+    ChatKonsultan,
+    Daftar,
+    DashboardPage,
+    Footer,
+    KataSandiBaru,
+    Konsultasi,
+    Login,
+    LupaSandi,
+    Payment,
+    Penjadwalan,
+    Profile,
+    Schedule,
+    Transaksi,
+    TukarPoint,
+    VerifikasiEmail,
 } from './sections';
 import TemanSehat from './sections/TemanSehat';
 import CommunityChatPage from './sections/Chat';

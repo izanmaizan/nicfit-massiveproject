@@ -1,7 +1,7 @@
 import * as React from "react"
-import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
-import { cn } from "../../lib/tailwind-utils";
-import { buttonVariants } from "./button";
+import {ChevronLeft, ChevronRight, MoreHorizontal} from "lucide-react"
+import {cn} from "../../lib/tailwind-utils";
+import {buttonVariants} from "./button";
 
 const Pagination = ({
   className,

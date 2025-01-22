@@ -1,19 +1,12 @@
-import { Button } from '../ui/button'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '../ui/dropdown-menu'
-import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet'
+import {Button} from '../ui/button'
+import {DropdownMenu, DropdownMenuTrigger,} from '../ui/dropdown-menu'
+import {Sheet, SheetContent, SheetTrigger} from '../ui/sheet'
 import useScroll from '../../hooks/useScroll'
 import useUrl from '../../hooks/useUrl'
-import { cn } from '../../lib/tailwind-utils'
-import { Menu, Package2 } from 'lucide-react'
-import { FaUser } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import {cn} from '../../lib/tailwind-utils'
+import {Menu, Package2} from 'lucide-react'
+import {FaUser} from 'react-icons/fa'
+import {Link} from 'react-router-dom'
 import SectionWrapper from './section-wrapper'
 
 const navLinks = [
